@@ -35,3 +35,7 @@ end
 def valid_move?(board, position)
   !position_taken?(board, position) && position.between?(0, 8)
 end
+
+def turn(board)
+  puts "Choose a position to move to (1-9), 1 = top left 9 = bottom right"
+end
