@@ -38,4 +38,10 @@ end
 
 def turn(board)
   puts "Choose a position to move to (1-9), 1 = top left 9 = bottom right"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  end
 end
