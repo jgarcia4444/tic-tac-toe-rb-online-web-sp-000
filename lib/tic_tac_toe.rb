@@ -65,3 +65,17 @@ def current_player(board)
     return "O"
   end
 end
+
+def won?(board)
+  WIN_COMBINATIONS.each do |win_combo|
+    idx1 = win_combo[0]
+    idx2 = win_combo[1]
+    idx3 = win_combo[2]
+    if board[idx1] == "X" && board[idx2] == "X" && board[idx3] == "X"
+      return win_combo
+    elsif board[idx1] == "O" && board[idx2] == "O" && board[idx3] == "O"
+      return win_combo
+    end
+  end
+  return false
+end
