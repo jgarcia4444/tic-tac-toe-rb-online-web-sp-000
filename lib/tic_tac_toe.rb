@@ -55,9 +55,5 @@ def turn_count(board)
       counter += 1
     end
   end
-  if counter.even?
-    return "X"
-  else 
-    return "O"
-  end
+  return counter
 end
