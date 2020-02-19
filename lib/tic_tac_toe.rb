@@ -21,6 +21,13 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, player_move, player_symbol)
-  board[player_move] = player_symbol
+def move(board, position, player_symbol)
+  board[position] = player_symbol
+end
+
+def position_taken?(board, position)
+  if board[position] == "X" || board[position] == "O"
+    return true
+  end
+  return false
 end
