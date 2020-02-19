@@ -31,3 +31,7 @@ def position_taken?(board, position)
   end
   return false
 end
+
+def valid_move?(board, position)
+  !position_taken?(board, position) && position.between?(0, 8)
+end
