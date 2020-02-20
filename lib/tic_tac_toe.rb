@@ -113,7 +113,8 @@ def play(board)
   end
 
   if won?(board)
-    winner = current_player(board)
+    win_combo = won?(board)
+    winner = board[win_combo[0]]
     puts "Congratulations #{winner}!"
   elsif draw?(board)
     puts "Cat's Game!"
