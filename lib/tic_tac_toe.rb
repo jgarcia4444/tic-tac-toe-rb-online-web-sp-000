@@ -98,3 +98,10 @@ def over?(board)
   end
   return false
 end
+
+def winner(board)
+  if won?(board)
+    win_combo = won?(board)
+    return board[win_combo[0]]
+  end
+end
