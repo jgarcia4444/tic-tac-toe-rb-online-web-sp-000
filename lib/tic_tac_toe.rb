@@ -102,7 +102,8 @@ end
 
 def winner(board)
   if won?(board)
-    return current_player(board)
+    win_combo = won?(board)
+    return board[win_combo[0]]
   end
   return nil
 end
@@ -113,8 +114,7 @@ def play(board)
   end
 
   if won?(board)
-    win_combo = won?(board)
-    winner = board[win_combo[0]]
+
     puts "Congratulations #{winner}!"
   elsif draw?(board)
     puts "Cat's Game!"
